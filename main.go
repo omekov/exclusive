@@ -1,13 +1,7 @@
 package main
 
-import (
-	"log"
-	"net/http"
-
-	"github.com/omekov/exclusive/handlers"
-)
+import "github.com/omekov/exclusive/internal/apiserver"
 
 func main() {
-	router := handlers.StartServer()
-	log.Fatal(http.ListenAndServe(":5555", router))
+	apiserver.Run()
 }

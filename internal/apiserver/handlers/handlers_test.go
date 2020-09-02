@@ -11,7 +11,7 @@ import (
 
 func TestHealthCheckHandler(t *testing.T) {
 	s := server{
-		Router: mux.NewRouter(),
+		router: mux.NewRouter(),
 	}
 	req, err := http.NewRequest(http.MethodGet, "/health-check", nil)
 	if err != nil {
@@ -36,7 +36,7 @@ func TestHealthCheckHandler(t *testing.T) {
 
 func TestHomeHandler(t *testing.T) {
 	s := server{
-		Router: mux.NewRouter(),
+		router: mux.NewRouter(),
 	}
 	req, err := http.NewRequest(http.MethodGet, "/", nil)
 	if err != nil {
